@@ -30,6 +30,8 @@ let icon = response.data.weather[0].icon;
 let iconElement = document.querySelector(`#temperature-icon`);
 let dateElement = document.querySelector(`#date`);
 
+celciusValue = response.data.main.temp;
+
 cityElement.innerHTML = city;
 weatherConditionElement.innerHTML = weatherCondition;
 humidityElement.innerHTML = `${humidity}%`;
@@ -51,3 +53,24 @@ axios.get(apiUrl).then(displayWeather);
 
 let searchCity = document.querySelector(`.search-weather`);
 searchCity.addEventListener(`submit`, importWeather);
+
+function displayFahrenheit(event){
+event.preventDefault();
+let temperatureElement = document.querySelector(`#temperature`);
+let fahrenheitValue = (celciusValue * 9) / 5 + 32;
+temperatureElement.innerHTML = Math.round(fahrenheitValue);
+}
+
+function displayCelcius(event){
+event.preventDefault();
+let temperatureElement = document.querySelector(`#temperature`);
+temperatureElement.innerHTML = Math.round(celciusValue);
+}
+
+let celciusValue = null;
+
+let convertToFahrenheit = document.querySelector(`#fahrenheit-link`);
+convertToFahrenheit.addEventListener(`click`, displayFahrenheit);
+
+let convertToCelcius = document.querySelector(`#celcius-link`);
+convertToCelcius.addEventListener(`click`, displayCelcius);
