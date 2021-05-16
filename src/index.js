@@ -18,23 +18,24 @@ function displayWeather(response){
     console.log(response.data);
 let city = response.data.name;
 let cityElement = document.querySelector(`#city`);
-cityElement.innerHTML = city;
 let weatherCondition = response.data.weather[0].description;
 let weatherConditionElement = document.querySelector(`#weather-description`);
-weatherConditionElement.innerHTML = weatherCondition;
 let humidity = response.data.main.humidity;
 let humidityElement = document.querySelector(`#humidity`);
-humidityElement.innerHTML = `${humidity}%`;
 let wind = response.data.wind.speed;
 let windElement = document.querySelector(`#wind`);
-windElement.innerHTML = `${wind}km/h`;
 let temperature = response.data.main.temp;
 let temperatureElement = document.querySelector(`#temperature`);
-temperatureElement.innerHTML = Math.round(temperature);
 let icon = response.data.weather[0].icon;
 let iconElement = document.querySelector(`#temperature-icon`);
-iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
 let dateElement = document.querySelector(`#date`);
+
+cityElement.innerHTML = city;
+weatherConditionElement.innerHTML = weatherCondition;
+humidityElement.innerHTML = `${humidity}%`;
+windElement.innerHTML = `${wind}km/h`;
+temperatureElement.innerHTML = Math.round(temperature);
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
