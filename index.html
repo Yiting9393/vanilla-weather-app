@@ -4,10 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
+    <div class="container">
+      <!-- Search form -->
+      <form>
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="text"
+              id="search-city"
+              class="form-control"
+              placeholder="Type a city..."
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              id="search-button"
+              class="btn btn-primary"
+              value="Search"
+            />
+          </div>
+        </div>
+      </form>
+
+      <!-- Current city display -->
+      <div class="row">
+        <div class="col-10">
+          <h1 id="city">George Town</h1>
+        </div>
+
+        <!-- Current temperature and icon display -->
+        <div class="col-2">
+          <h1 id="temperature">
+            <img src="#" alt="temperature-icon" id="temperature-icon" />
+            32<a href="#" id="celcius-link" class="units">°C</a>|
+            <a href="#" id="fahrenheit-link" class="units">°F</a>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Time and description display -->
+      <ul>
+        <li id="date">Last updated: Sunday 09:24,</li>
+        <li id="weather-description">scattered clouds</li>
+
+        <li>
+          <strong> Humidity:</strong> <span id="humidity">66</span>%
+          <strong> Wind: </strong> <span id="wind">3.09</span>km/h
+        </li>
+      </ul>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
