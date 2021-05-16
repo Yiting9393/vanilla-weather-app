@@ -73,14 +73,16 @@ a {
 
 .descriptions .last-update,
 #weather-description,
-strong {
+strong,
+.feels-like {
   font-size: 16px;
   font-weight: 600;
   opacity: 0.5;
 }
 
 ul li #humidity,
-#wind {
+#wind,
+#feels-like-temperature {
   color: #094988f5;
   font-weight: 700;
   opacity: 0.9;
@@ -89,8 +91,8 @@ ul li #humidity,
 .current-temperature {
   padding-right: 0;
   position: relative;
-  top: 15px;
-  right: -100px;
+  top: 5px;
+  right: -90px;
 }
 
 #temperature-icon {
@@ -109,6 +111,12 @@ ul li #humidity,
   font-weight: bolder;
   position: relative;
   top: -43px;
+}
+
+.feels-like-sentence {
+  position: relative;
+  right: -80px;
+  top: -15px;
 }
 
 .active {
