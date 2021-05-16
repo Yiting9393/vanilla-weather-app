@@ -58,17 +58,25 @@
         <!-- Current temperature and icon display -->
 
         <div class="col-6 current-temperature">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="temperature-icon"
-            id="temperature-icon"
-            width="70"
-          />
-          <span id="temperature"></span
-          ><span class="units"
-            ><a href="#" id="celcius-link" class="active">°C | </a
-            ><a href="#" id="fahrenheit-link">°F</a>
-          </span>
+          <ul>
+            <li>
+              <img
+                src="#"
+                alt="temperature-icon"
+                id="temperature-icon"
+                width="70"
+              />
+              <span id="temperature"></span
+              ><span class="units"
+                ><a href="#" id="celcius-link" class="active">°C | </a
+                ><a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </li>
+            <li class="feels-like-sentence">
+              <strong class="feels-like">Feels like </strong
+              ><span id="feels-like-temperature">14</span>°
+            </li>
+          </ul>
         </div>
       </div>
 
