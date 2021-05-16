@@ -40,7 +40,7 @@ humidityElement.innerHTML = `${humidity}%`;
 windElement.innerHTML = `${wind}km/h`;
 temperatureElement.innerHTML = Math.round(temperature);
 feelsLikeElement.innerHTML = Math.round(feelsLike);
-iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${icon}@2x.png`);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
@@ -50,7 +50,7 @@ let city = document.querySelector(`#search-city`);
 let units = `metric`;
 let apiKey = `bf2c0ac77d7ed4ba5477597b0389d74a`;
 let apiEndPoint = `api.openweathermap.org/data/2.5/weather?q=`;
-let apiUrl = `http://${apiEndPoint}${city.value}&units=${units}&appid=${apiKey}`;
+let apiUrl = `https://${apiEndPoint}${city.value}&units=${units}&appid=${apiKey}`;
 axios.get(apiUrl).then(displayWeather);
 }
 
