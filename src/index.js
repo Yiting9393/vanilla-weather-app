@@ -31,6 +31,9 @@ windElement.innerHTML = `${wind}km/h`;
 let temperature = response.data.main.temp;
 let temperatureElement = document.querySelector(`#temperature`);
 temperatureElement.innerHTML = Math.round(temperature);
+let icon = response.data.weather[0].icon;
+let iconElement = document.querySelector(`#temperature-icon`);
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
 let dateElement = document.querySelector(`#date`);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
