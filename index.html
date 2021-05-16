@@ -23,46 +23,70 @@
               type="text"
               id="search-city"
               class="form-control"
-              placeholder="Type a city..."
+              placeholder="Enter a city..."
             />
           </div>
           <div class="col-3">
             <input
               type="submit"
+              class="btn btn-primary w-100"
               id="search-button"
-              class="btn btn-primary"
               value="Search"
             />
           </div>
         </div>
       </form>
 
-      <!-- Current city display -->
+      <!-- Current city display, time, and weather description -->
       <div class="row">
-        <div class="col-10">
+        <div class="col-6">
           <h1 id="city">George Town</h1>
+          <ul class="descriptions">
+            <li id="date">Last updated: Sunday 09:24</li>
+            <li id="weather-description">scattered clouds</li>
+
+            <li>
+              <strong> Humidity:</strong> <span id="humidity">66%</span>
+              <strong> Wind: </strong> <span id="wind">3.09km/h</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Current temperature and icon display -->
-        <div class="col-2">
-          <h1 id="temperature">
-            <img src="#" alt="temperature-icon" id="temperature-icon" />
-            32<a href="#" id="celcius-link" class="units">°C</a>|
-            <a href="#" id="fahrenheit-link" class="units">°F</a>
-          </h1>
+
+        <div class="col-6 current-temperature">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="temperature-icon"
+            id="temperature-icon"
+            width="70"
+          />
+          <span id="temperature">32</span
+          ><span class="units"
+            ><a href="#" id="celcius-link">°C | </a
+            ><a href="#" id="fahrenheit-link">°F</a>
+          </span>
         </div>
       </div>
 
-      <!-- Time and description display -->
-      <ul>
-        <li id="date">Last updated: Sunday 09:24,</li>
-        <li id="weather-description">scattered clouds</li>
-
-        <li>
-          <strong> Humidity:</strong> <span id="humidity">66</span>%
-          <strong> Wind: </strong> <span id="wind">3.09</span>km/h
-        </li>
-      </ul>
+      <!-- Footer: link to GitHub and Netlify -->
+      <p class="footer">
+        <a
+          href="https://github.com/Yiting9393/vanilla-weather-app"
+          target="_blank"
+          id="github-link"
+          class="footer-link"
+          >Open-source code</a
+        >
+        by Yiting Cheah, hosted on
+        <a
+          href="https://youthful-einstein-cf890a.netlify.app"
+          target="_blank"
+          id="netlify-link"
+          class="footer-link"
+          >Netlify</a
+        >
+      </p>
     </div>
     <script src="src/index.js"></script>
   </body>
