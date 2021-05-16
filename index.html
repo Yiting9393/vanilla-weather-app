@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <!-- Search form -->
-      <form>
+      <form class="search-weather">
         <div class="row">
           <div class="col-9">
             <input
@@ -41,16 +41,16 @@
       <!-- Current city display, time, and weather description -->
       <div class="row">
         <div class="col-6">
-          <h1 id="city">George Town</h1>
+          <h1 id="city"></h1>
           <ul class="descriptions">
             <li class="last-update">
               Last updated:
-              <span id="date">Sunday 09:24</span>
+              <span id="date"></span>
             </li>
-            <li id="weather-description">scattered clouds</li>
+            <li id="weather-description"></li>
             <li>
-              <strong> Humidity:</strong> <span id="humidity">66%</span>
-              <strong> Wind: </strong> <span id="wind">3.09km/h</span>
+              <strong> Humidity:</strong> <span id="humidity"></span
+              ><strong>, Wind: </strong> <span id="wind"></span>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@
             id="temperature-icon"
             width="70"
           />
-          <span id="temperature">32</span
+          <span id="temperature"></span
           ><span class="units"
             ><a href="#" id="celcius-link">°C | </a
             ><a href="#" id="fahrenheit-link">°F</a>
