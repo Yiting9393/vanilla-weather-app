@@ -56,6 +56,8 @@ searchCity.addEventListener(`submit`, importWeather);
 
 function displayFahrenheit(event){
 event.preventDefault();
+celciusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 let temperatureElement = document.querySelector(`#temperature`);
 let fahrenheitValue = (celciusValue * 9) / 5 + 32;
 temperatureElement.innerHTML = Math.round(fahrenheitValue);
@@ -63,14 +65,16 @@ temperatureElement.innerHTML = Math.round(fahrenheitValue);
 
 function displayCelcius(event){
 event.preventDefault();
+celciusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
 let temperatureElement = document.querySelector(`#temperature`);
 temperatureElement.innerHTML = Math.round(celciusValue);
 }
 
 let celciusValue = null;
 
-let convertToFahrenheit = document.querySelector(`#fahrenheit-link`);
-convertToFahrenheit.addEventListener(`click`, displayFahrenheit);
+let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
+fahrenheitLink.addEventListener(`click`, displayFahrenheit);
 
-let convertToCelcius = document.querySelector(`#celcius-link`);
-convertToCelcius.addEventListener(`click`, displayCelcius);
+let celciusLink = document.querySelector(`#celcius-link`);
+celciusLink.addEventListener(`click`, displayCelcius);
