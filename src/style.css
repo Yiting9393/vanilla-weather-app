@@ -104,10 +104,19 @@ ul li #humidity,
 }
 
 .current-temperature .units {
+  color: black;
   font-size: 18px;
   font-weight: bolder;
   position: relative;
   top: -43px;
+}
+
+.active {
+  color: black;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 p #github-link:hover {
