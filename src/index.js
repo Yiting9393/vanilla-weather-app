@@ -15,7 +15,6 @@ function formatDate(timestamp) {
 
 
 function displayWeather(response){
-    console.log(response.data);
 let city = response.data.name;
 let cityElement = document.querySelector(`#city`);
 let weatherCondition = response.data.weather[0].description;
@@ -53,6 +52,18 @@ axios.get(apiUrl).then(displayWeather);
 
 let searchCity = document.querySelector(`.search-weather`);
 searchCity.addEventListener(`submit`, importWeather);
+
+function showPosition(position){
+ let latitude = position.coords.latitude;
+ let longitude = position.coords.longitude;
+ let units = `metric`; 
+ let apiKey = `bf2c0ac77d7ed4ba5477597b0389d74a`;
+ let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather`
+ let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+ axios.get(apiUrl).then(displayWeather);
+}
+
+navigator.geolocation.getCurrentPosition(showPosition);
 
 function displayFahrenheit(event){
 event.preventDefault();
