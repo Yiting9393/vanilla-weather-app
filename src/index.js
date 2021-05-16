@@ -25,17 +25,21 @@ let wind = response.data.wind.speed;
 let windElement = document.querySelector(`#wind`);
 let temperature = response.data.main.temp;
 let temperatureElement = document.querySelector(`#temperature`);
+let feelsLike = response.data.main.feels_like;
+let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
 let icon = response.data.weather[0].icon;
 let iconElement = document.querySelector(`#temperature-icon`);
 let dateElement = document.querySelector(`#date`);
 
 celciusValue = response.data.main.temp;
+feelsLikeCelciusValue = response.data.main.feels_like; 
 
 cityElement.innerHTML = city;
 weatherConditionElement.innerHTML = weatherCondition;
 humidityElement.innerHTML = `${humidity}%`;
 windElement.innerHTML = `${wind}km/h`;
 temperatureElement.innerHTML = Math.round(temperature);
+feelsLikeElement.innerHTML = Math.round(feelsLike);
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
@@ -72,6 +76,9 @@ fahrenheitLink.classList.add("active");
 let temperatureElement = document.querySelector(`#temperature`);
 let fahrenheitValue = (celciusValue * 9) / 5 + 32;
 temperatureElement.innerHTML = Math.round(fahrenheitValue);
+let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
+let feelsLikeFahrenheit = (feelsLikeCelciusValue * 9) / 5 + 32;
+feelsLikeElement.innerHTML = Math.round(feelsLikeFahrenheit);
 }
 
 function displayCelcius(event){
@@ -80,9 +87,12 @@ celciusLink.classList.add("active");
 fahrenheitLink.classList.remove("active");
 let temperatureElement = document.querySelector(`#temperature`);
 temperatureElement.innerHTML = Math.round(celciusValue);
+let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
+feelsLikeElement.innerHTML = Math.round(feelsLikeCelciusValue);
 }
 
 let celciusValue = null;
+let feelsLikeCelciusValue = null;
 
 let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
 fahrenheitLink.addEventListener(`click`, displayFahrenheit);
