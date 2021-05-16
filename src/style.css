@@ -27,10 +27,10 @@ a {
   background: white;
   border: 1px solid transparent;
   border-radius: 10px;
+  margin-top: 60px;
   max-width: 700px;
   padding: 30px;
   padding-top: 40px;
-  margin-top: 60px;
 }
 
 #search-city,
@@ -56,7 +56,8 @@ a {
 }
 
 #city,
-#temperature {
+#temperature,
+.descriptions {
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
 
@@ -68,6 +69,21 @@ a {
 
 #weather-description:first-letter {
   text-transform: uppercase;
+}
+
+.descriptions .last-update,
+#weather-description,
+strong {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+ul li #humidity,
+#wind {
+  color: #094988f5;
+  font-weight: 700;
+  opacity: 0.9;
 }
 
 .current-temperature {
@@ -92,24 +108,6 @@ a {
   font-weight: bolder;
   position: relative;
   top: -43px;
-}
-
-ul li #humidity,
-#wind {
-  color: #094988f5;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-.descriptions #date,
-#weather-description,
-strong {
-  font-size: 16px;
-  opacity: 0.5;
-}
-
-.descriptions {
-  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
 
 p #github-link:hover {
