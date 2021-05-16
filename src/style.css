@@ -1,0 +1,129 @@
+body {
+  background: #ecf2fc;
+}
+
+form {
+  margin-bottom: 60px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  font-family: monospace;
+  font-size: smaller;
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 30px;
+  padding-top: 40px;
+  margin-top: 60px;
+}
+
+#search-city,
+#search-button {
+  font-size: 18px;
+  height: 50px;
+}
+
+#search-city {
+  background: #ecf2fc;
+  border: 1px solid #ecf2fc;
+  opacity: 0.8;
+}
+
+#search-button {
+  background: #094988f5;
+  font-weight: 500;
+}
+
+#search-button:hover {
+  background: #d62090;
+  border: 1px solid #d62090;
+}
+
+#city,
+#temperature {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+
+#city {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 60px;
+}
+
+#weather-description:first-letter {
+  text-transform: uppercase;
+}
+
+.current-temperature {
+  padding-right: 0;
+  position: relative;
+  top: 15px;
+  right: -100px;
+}
+
+#temperature-icon {
+  position: relative;
+  top: -23px;
+}
+
+#temperature {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.current-temperature .units {
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+  top: -43px;
+}
+
+ul li #humidity,
+#wind {
+  color: #094988f5;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.descriptions #date,
+#weather-description,
+strong {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.descriptions {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+
+p #github-link:hover {
+  font-weight: 400;
+  color: #d62090;
+  cursor: pointer;
+}
+
+p #netlify-link:hover {
+  font-weight: 400;
+  color: #d62090;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 25px;
+}
