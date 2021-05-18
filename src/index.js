@@ -31,7 +31,7 @@ let icon = response.data.weather[0].icon;
 let iconElement = document.querySelector(`#temperature-icon`);
 let dateElement = document.querySelector(`#date`);
 
-celciusValue = response.data.main.temp;
+// celciusValue = response.data.main.temp;
 feelsLikeCelciusValue = response.data.main.feels_like; 
 
 cityElement.innerHTML = city;
@@ -69,33 +69,33 @@ function showPosition(position){
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
-function displayFahrenheit(event){
-event.preventDefault();
-celciusLink.classList.remove("active");
-fahrenheitLink.classList.add("active");
-let temperatureElement = document.querySelector(`#temperature`);
-let fahrenheitValue = (celciusValue * 9) / 5 + 32;
-temperatureElement.innerHTML = Math.round(fahrenheitValue);
-let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
-let feelsLikeFahrenheit = (feelsLikeCelciusValue * 9) / 5 + 32;
-feelsLikeElement.innerHTML = Math.round(feelsLikeFahrenheit);
-}
+// function displayFahrenheit(event){
+// event.preventDefault();
+// celciusLink.classList.remove("active");
+// fahrenheitLink.classList.add("active");
+// let temperatureElement = document.querySelector(`#temperature`);
+// let fahrenheitValue = (celciusValue * 9) / 5 + 32;
+// temperatureElement.innerHTML = Math.round(fahrenheitValue);
+// let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
+// let feelsLikeFahrenheit = (feelsLikeCelciusValue * 9) / 5 + 32;
+// feelsLikeElement.innerHTML = Math.round(feelsLikeFahrenheit);
+// }
 
-function displayCelcius(event){
-event.preventDefault();
-celciusLink.classList.add("active");
-fahrenheitLink.classList.remove("active");
-let temperatureElement = document.querySelector(`#temperature`);
-temperatureElement.innerHTML = Math.round(celciusValue);
-let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
-feelsLikeElement.innerHTML = Math.round(feelsLikeCelciusValue);
-}
+// function displayCelcius(event){
+// event.preventDefault();
+// celciusLink.classList.add("active");
+// fahrenheitLink.classList.remove("active");
+// let temperatureElement = document.querySelector(`#temperature`);
+// temperatureElement.innerHTML = Math.round(celciusValue);
+// let feelsLikeElement = document.querySelector(`#feels-like-temperature`);
+// feelsLikeElement.innerHTML = Math.round(feelsLikeCelciusValue);
+// }
 
-let celciusValue = null;
-let feelsLikeCelciusValue = null;
+// let celciusValue = null;
+// let feelsLikeCelciusValue = null;
 
-let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
-fahrenheitLink.addEventListener(`click`, displayFahrenheit);
+// let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
+// fahrenheitLink.addEventListener(`click`, displayFahrenheit);
 
-let celciusLink = document.querySelector(`#celcius-link`);
-celciusLink.addEventListener(`click`, displayCelcius);
+// let celciusLink = document.querySelector(`#celcius-link`);
+// celciusLink.addEventListener(`click`, displayCelcius);
