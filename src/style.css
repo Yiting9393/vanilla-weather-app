@@ -119,13 +119,13 @@ ul li #humidity,
   top: -15px;
 }
 
-.active {
+/* .active {
   color: black;
 }
 
 .active:hover {
   color: black;
-}
+} */
 
 p #github-link:hover {
   font-weight: 400;
@@ -139,7 +139,7 @@ p #netlify-link:hover {
   cursor: pointer;
 }
 
-.forecast {
+#forecast {
   text-align: center;
   margin-top: 30px;
   opacity: 0.6;
