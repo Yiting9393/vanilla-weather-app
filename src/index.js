@@ -32,11 +32,12 @@ let forecastHTML = `<div class="row">`;
         `<div class="col-2">
             <div id="forecast-day">${formatDay(forecastDay.dt)}</div>
                 <img
+                id="forecast-icon"
                 src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                 alt="weather-icon"
                 width="60"
                 />
-                <div class="weather-forecast-temperature">
+                <div id="weather-forecast-temperature">
                     <span id="forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span>
                     <span id="forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span>
                 </div>
