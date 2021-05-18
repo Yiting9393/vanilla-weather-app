@@ -44,6 +44,30 @@ iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${icon}@2x.pn
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
+function displayForecast(){
+let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+
+        forecastElement.innerHTML = forecastHTML + `
+            <div class="col-2">
+                <div id="forecast-day">Tue</div>
+                <img
+                src="https://openweathermap.org/img/wn/01n@2x.png"
+                alt="weather-icon"
+                width="60"
+                />
+                <span id="forecast-temperature-max">18°</span>
+                <span id="forecast-temperature-min">10°</span>
+            </div>
+            </div>
+            `;
+
+    forecastHTML = `</div>`;
+    
+forecastElement.innerHTML = forecastHTML;
+}
+
 function importWeather(event){
     event.preventDefault();
 let city = document.querySelector(`#search-city`);
@@ -68,6 +92,8 @@ function showPosition(position){
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
+
+displayForecast();
 
 // function displayFahrenheit(event){
 // event.preventDefault();
