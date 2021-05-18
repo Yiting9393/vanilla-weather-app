@@ -124,7 +124,7 @@ ul li #humidity,
 }
 
 .active:hover {
-  text-decoration: none;
+  color: black;
 }
 
 p #github-link:hover {
